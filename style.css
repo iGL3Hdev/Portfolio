@@ -1,3 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+img{
+    obje-fit: cover;
+}
+
+h2{
+    font-weight: 400;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    border: 1px solid #e8e8e8;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+    padding: 12px;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+nav .logo a{
+    color:#000;
+    font-weight: 600;
+}
+
+nav .nav-links{
+    display: flex;
+    gap: 24px;
+}
+
+nav .nav-links a{
+    font-size: 14px;
+    color: #606060;
+    transition: all 0.3s ease;
+}
+
+nav .nav-links a:hover{
+    color: #000;
+}
+
+nav button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 14px;
+    height: 32px;
+    width: 122px;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav button:hover,
+.hero .left-section .top .buttons button.doc:hover,
+.contact .items .item button:hover{
+    color:#000;
+    background: #fff;
+    border-color: #dedede;
+}
+
+nav button i{
+    font-size: 20px;
+}
+
+.hero{
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero > img{
+    max-width: 520px;
+    width: 44%;
+    border-radius: 26px;
+}
+
+.hero .left-section .top h2{
+    font-size: 44px;
+    margin-bottom: 24px;
+}
+
+.hero .left-section .top p{
+    color: #606060;
+    font-size: 18px;
+    margin-bottom: 24px;
+    text-align: justify;
+}
+
+.hero .left-section .top .buttons{
+    display: flex;
+    gap: 8px;
+}
+
+.hero .left-section .top .buttons button,
+.projects .inner > button,
+.contact .items .item button{
+    font-size: 16px;
+    border: none;
+    padding: 5px 20px;
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.hero .left-section .top .buttons button i{
+    font-size: 16px;
+}
+
+.hero .left-section .top .buttons button.doc,
+.contact .items .item button{
+    background: #000b;
+    color: #fff;
+}
+
+
+
+
+
