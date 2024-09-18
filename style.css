@@ -44,8 +44,8 @@ nav .logo{
 }
 
 nav .logo img{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 nav .logo a{
@@ -106,9 +106,14 @@ nav button i{
 }
 
 .hero > img{
-    max-width: 520px;
-    width: 44%;
+    max-width: 580px;
+    width: 50%;
     border-radius: 26px;
+}
+
+.hero .left-section .top h1{
+    font-size: 50px;
+    margin-bottom: 24px;
 }
 
 .hero .left-section .top h2{
