@@ -199,7 +199,7 @@ nav button i{
     background: #fff;
 }
 
-/*.about > h2{
+.about > h2{
     font-size: 18px;
     text-align: center;
     margin-bottom: 30px;
@@ -221,10 +221,10 @@ nav button i{
 
 .about .items .item .inner{
     background: #fff;
-    padding: 24px;
+    padding: 40px;
     border-radius: 16px;
     border: 1px solid #e8e8e8;
-    min-height: 365px;
+    height: 550px;
 }
 
 .about .items .item .inner img{
@@ -245,7 +245,7 @@ nav button i{
     font-size: 15px;
 }
 
-.projects{
+/*.projects{
     padding: 0 24px;
     background: #f5f5f5;
 }
