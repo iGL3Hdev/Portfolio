@@ -125,22 +125,78 @@
             </div>
         </div>
         <div class="contact" id="contact">
-            <h2>¿Interesado en trabajar conmigo?</h2>
-            <div class="items">
-                <div class="item">
-                    <a href="#">Contacto</a>
-                    <p>Envíame un correo y hablemos del proyecto y cómo puedo ayudarle</p>
-                    <button>
-                    <a href="mailto:igl3hdev@gmail.com?Subject=Interesado%20en%20el%20curso">Correo</a>
-                    </button>
+            <div class="contact-container">
+                <div class="contact-content">
+                    <h2>¿Interesado en trabajar conmigo?</h2>
+                    <p class="contact-subtitle">Déjame tu mensaje y me pondré en contacto contigo lo antes posible</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Enviar Mensaje<i class="ri-send-plane-line"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
 
         <footer>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">iGL3Hdev</a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>iGL3Hdev</h3>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Inicio</a>
+                    <a href="#about">Experiencia</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/iGL3Hdev" target="_blank"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/carlosiglh/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 iGL3Hdev. Todos los derechos reservados.</p>
+            </div>
         </footer>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Crear mailto link con los datos del formulario
+                const mailtoLink = `mailto:igl3hdev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`)}`;
+                
+                // Abrir cliente de correo
+                window.location.href = mailtoLink;
+                
+                // Mostrar mensaje de confirmación
+                alert('Abriendo tu cliente de correo. Si no se abre automáticamente, copia el enlace de contacto.');
+            });
+        </script>
     </body>
 </html>
